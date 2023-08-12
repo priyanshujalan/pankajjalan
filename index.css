@@ -1,0 +1,253 @@
+/* Reset default margins and paddings */
+body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+  
+/* Global styles for the body and fonts */
+body {
+    font-family: 'Rubik', Arial, Helvetica;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9; /* Cream background color */
+}
+  
+  /* Headings */
+h1, h3, h4{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+  
+h1 {
+    font-size: 36px;
+    color: #222;
+}
+  
+h3 , h4{
+    font-size: 24px;
+    color: #444;
+}
+  
+/* Paragraphs */
+p {
+    text-align: justify; /* Justify-align the paragraphs */
+    margin-bottom: 20px;
+}
+  
+/* Additional styles for links */
+a {
+    color: #007bff;
+}
+  
+/* Container styles for the businessman portfolio */
+.portfolio-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+    padding: 20px; 
+}
+  
+.content-with-photo {
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+}
+  
+.photo{
+    margin-left: 30px;
+    width: 320px;
+}
+
+.organizations-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    animation: slide 20s linear infinite;
+}
+
+.organizations-list-ngo {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.organizations-list-ngo li{
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    margin: 10px;
+    width: 300px;
+}
+
+.organizations-list-ngo li p{
+    text-align: center;
+}
+
+.organization-logo {
+    height: 120px;
+    width: auto;
+    max-width: 350px;
+    margin: 10px;
+    
+}
+
+.organizations-slider {
+    overflow: hidden;
+}
+
+  
+.organizations-carousel {
+    position: relative;
+    overflow: hidden;
+}
+  
+.carousel-content {
+    display: flex;
+    transition: transform 0.5s ease; /* Transition effect for smooth sliding */
+}
+  
+.slide {
+    flex: 0 0 auto;
+    margin-right: 10px;
+    text-align: center;
+}
+  
+/* Styles for the organization links */
+.slide a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #333;
+}
+  
+/* Styles for the organization logos */
+.slide img {
+    height: 120px;
+    width: auto;
+    max-width: 350px;
+    margin: 10px;
+}
+
+.heading{
+  display: flex;
+  flex-direction: row;
+}
+
+.social-icons{
+	padding:30px;
+  padding-right: 0px;
+  text-align: right;
+  width: 66%;
+}
+
+.text-div{
+  width: 33%;
+}
+.mobile-photo{
+  display: none;
+}
+@media (max-width: 767px) {
+    .photo {
+      display: none;
+    }
+
+    .text-div{
+      width: 100%;
+    }
+
+    .social-icons{
+      padding-left: 0px;
+      text-align: left;
+      width: 100%;
+    }
+
+    .mobile-photo{
+      display: block;
+      width: 100%;
+    }
+
+    .heading{
+      flex-direction: column;
+    }
+
+    .organizations-list-ngo {
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        padding: 0;
+    }
+}
+
+.marquee-container{
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee {
+    height: 200px;
+    width: 2200px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .marquee--inner {
+    display: flex;
+    flex-direction: row;
+    width: 200%;
+    position: absolute;
+    animation: marquee 25s linear infinite;
+  }
+  
+  .marquee--inner:hover {
+    animation-play-state: paused;
+  }
+  
+  span {
+    display: flex;
+    flex-direction: row;
+    float: left;
+  }
+
+  span div{
+    text-align: center;
+  }
+  
+  @keyframes marquee {
+    0% { left: 0; }
+    100% { left: -100%; }
+  }
+
+
+
+.social-icons a{
+  line-height: 30px;
+  font-size: 30px;
+  margin: 0 5px;
+  text-decoration:none;
+  color: #333;
+}
+.social-icons a i{
+	line-height:30px;
+  font-size:30px;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);
+}
+.social-icons a:hover i{
+  box-shadow: 0px 0px 150px #000000;
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1.5);
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1.5);   
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1.5);
+  transition: all 200ms ease-in;
+  transform: scale(1.5);
+}
