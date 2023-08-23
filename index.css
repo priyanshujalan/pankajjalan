@@ -179,44 +179,61 @@ a {
     }
 }
 
-.marquee-container{
+.marquee-container, .marquee-container-social{
     width: 100%;
     overflow: hidden;
 }
 
-.marquee {
+.marquee, .marquee-social {
     height: 200px;
     width: 2200px;
     overflow: hidden;
     position: relative;
-  }
+}
+
+.marquee-social{
+  height: 220px;
+  width: 1000px;
+}
   
-  .marquee--inner {
+.marquee--inner, .marquee--inner-social {
     display: flex;
     flex-direction: row;
     width: 200%;
     position: absolute;
     animation: marquee 25s linear infinite;
-  }
-  
-  .marquee--inner:hover {
+}
+
+.marquee--inner-social{
+    animation: marquee 15s linear infinite;
+}
+.marquee--inner:hover {
     animation-play-state: paused;
-  }
-  
-  span {
+}
+
+.marquee--inner-social:hover {
+  animation-play-state: paused;
+}
+
+.marquee--inner-social div{
+  margin-right: 10px;
+  min-width: 240px;
+}
+
+span {
     display: flex;
     flex-direction: row;
     float: left;
-  }
+}
 
-  span div{
+span div{
     text-align: center;
-  }
+}
   
-  @keyframes marquee {
+@keyframes marquee {
     0% { left: 0; }
     100% { left: -100%; }
-  }
+}
 
 
 
